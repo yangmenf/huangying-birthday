@@ -361,6 +361,33 @@
             transform: none !important;
             pointer-events: auto !important;
         }
+        #stage6 button {
+            transform: none !important;
+            pointer-events: auto !important;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .wish-tag {
+                font-size: 0.9rem !important; /* Smaller text */
+                padding: 6px 14px !important;
+                white-space: normal !important; /* Allow wrapping if really needed */
+                max-width: 150px;
+                text-align: center;
+            }
+            #bdayTitle {
+                font-size: 4rem !important; /* Smaller title */
+            }
+            #bdayName {
+                font-size: 2.5rem !important;
+            }
+            .btn-glow {
+                padding: 10px 25px !important;
+                font-size: 1rem !important;
+            }
+            h1 { font-size: 2rem !important; }
+            h2 { font-size: 1.8rem !important; }
+        }
     </style>
 </head>
 <body>
@@ -724,7 +751,7 @@
             const wishes = [
                 '生日快乐！🎂', '永远18岁 💃', '发财暴富 💰', '吃不胖体质 🍔', '桃花朵朵开 🌸', 
                 '今天你最大 👑', '颜值爆表 ✨', '你可以永远相信黄颖', '沉迷赚钱 💸', '前程似锦 🌟',
-                '奶茶自由 🥤', '所有的坑都完美避开', '代码无Bug', '头发浓密', '笑口常开 😄',
+                '奶茶自由 🥤', '所有的坑都完美避开', '出门捡到钱', '头发浓密', '笑口常开 😄',
                 '想去哪就去哪 ✈️', '不仅仅是美', '才华横溢', '欧气满满', '快乐星球居民'
             ];
 
@@ -733,8 +760,14 @@
                 const el = document.createElement('div');
                 el.className = 'wish-tag';
                 el.textContent = text;
-                const x = (Math.random() - 0.5) * 80;
-                const y = (Math.random() - 0.5) * 80;
+                
+                // Responsive Spread: Tighter range on mobile
+                const isMobile = window.innerWidth < 768;
+                const rangeX = isMobile ? 60 : 80; // Reduce from 80% to 60% on mobile
+                const rangeY = isMobile ? 70 : 80;
+                
+                const x = (Math.random() - 0.5) * rangeX;
+                const y = (Math.random() - 0.5) * rangeY;
                 const z = Math.random() * 500 - 250;
                 el.style.left = `50%`;
                 el.style.top = `50%`;
