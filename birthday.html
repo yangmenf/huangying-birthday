@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>生日快乐，黄颖！🎂</title>
     
     <!-- 引入外部库 -->
@@ -259,6 +259,7 @@
             white-space: nowrap;
             pointer-events: auto; /* Re-enable clicks */
             transition: transform 0.3s;
+            transform: translate(-50%, -50%); /* Critical Fix: Center element on its coordinate */
         }
         
         .wish-tag:hover {
