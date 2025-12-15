@@ -237,19 +237,31 @@
                     <!-- 步骤列表 -->
                     <div class="space-y-12 relative before:absolute before:inset-0 before:ml-6 md:before:mx-auto before:w-1 before:bg-gradient-to-b before:from-blue-200 before:via-purple-200 before:to-transparent">
                         
-                        <!-- 步骤 1 -->
-                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group step-item">
+                        <!-- 步骤 1 (新增) -->
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group step-item" data-step="1">
                             <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-blue-50 bg-blue-600 shadow-lg shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 text-white text-xl font-bold z-10 transition-transform group-hover:scale-110">1</div>
                             <div class="w-[calc(100%-5rem)] md:w-[calc(50%-3rem)] bg-white/80 p-6 rounded-2xl border border-white shadow-lg backdrop-blur-sm hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
-                                <h4 class="font-bold text-lg text-slate-800 mb-2">确认配网状态</h4>
-                                <p class="text-slate-600 leading-relaxed mb-4">给设备通电，观察开发板上的 RGB 彩灯。如果是<strong>蓝色匀速闪烁</strong>，说明设备已进入配网模式。</p>
-                                <img src="assets/page_1_X68.jpg" class="w-full rounded-xl shadow-md hover-zoom" alt="设备启动示意图" onerror="this.style.display='none'" @click="previewImage = $el.src">
+                                <h4 class="font-bold text-lg text-slate-800 mb-2">连接电源</h4>
+                                <p class="text-slate-600 leading-relaxed mb-4">将 Type-C 数据线插入小智芯片的接口，另一端连接电源适配器（或电脑 USB 口）。</p>
+                                <div class="bg-blue-50 p-3 rounded-lg border border-blue-100 text-sm text-blue-800">
+                                    <i class="fa-solid fa-bolt mr-2"></i><strong>注意：</strong> 通电后看到板子上亮起灯光即表示供电正常。
+                                </div>
                             </div>
                         </div>
 
                         <!-- 步骤 2 -->
-                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group step-item">
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group step-item" data-step="2">
                             <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-slate-400 shadow-lg shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 text-white text-xl font-bold z-10 transition-transform group-hover:scale-110 group-hover:bg-blue-500">2</div>
+                            <div class="w-[calc(100%-5rem)] md:w-[calc(50%-3rem)] bg-white/80 p-6 rounded-2xl border border-white shadow-lg backdrop-blur-sm hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                                <h4 class="font-bold text-lg text-slate-800 mb-2">确认配网状态</h4>
+                                <p class="text-slate-600 leading-relaxed mb-4">观察开发板上的 RGB 彩灯。如果是<strong>蓝色匀速闪烁</strong>，说明设备已进入配网模式。</p>
+                                <img src="assets/page_1_X68.jpg" class="w-full rounded-xl shadow-md hover-zoom" alt="设备启动示意图" onerror="this.style.display='none'" @click="previewImage = $el.src">
+                            </div>
+                        </div>
+
+                        <!-- 步骤 3 -->
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group step-item" data-step="3">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-slate-400 shadow-lg shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 text-white text-xl font-bold z-10 transition-transform group-hover:scale-110 group-hover:bg-blue-500">3</div>
                             <div class="w-[calc(100%-5rem)] md:w-[calc(50%-3rem)] bg-white/80 p-6 rounded-2xl border border-white shadow-lg backdrop-blur-sm hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                                 <h4 class="font-bold text-lg text-slate-800 mb-2">连接热点</h4>
                                 <p class="text-slate-600 leading-relaxed mb-4">打开手机 Wi-Fi 设置，找到并连接名称为 <strong>"Xiaozhi-xxx"</strong> 的热点（无密码）。</p>
@@ -261,9 +273,9 @@
                             </div>
                         </div>
 
-                        <!-- 步骤 3 -->
-                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group step-item">
-                            <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-slate-400 shadow-lg shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 text-white text-xl font-bold z-10 transition-transform group-hover:scale-110 group-hover:bg-blue-500">3</div>
+                        <!-- 步骤 4 -->
+                        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group step-item" data-step="4">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full border-4 border-white bg-slate-400 shadow-lg shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 text-white text-xl font-bold z-10 transition-transform group-hover:scale-110 group-hover:bg-blue-500">4</div>
                             <div class="w-[calc(100%-5rem)] md:w-[calc(50%-3rem)] bg-white/80 p-6 rounded-2xl border border-white shadow-lg backdrop-blur-sm hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                                 <h4 class="font-bold text-lg text-slate-800 mb-2">配置网络</h4>
                                 <p class="text-slate-600 leading-relaxed mb-4">连接热点后通常会自动弹出配置页。如果没有弹出，请在浏览器输入 <a href="http://192.168.4.1" target="_blank" class="text-blue-600 hover:underline font-mono bg-blue-50 px-2 py-1 rounded">192.168.4.1 <i class="fa-solid fa-external-link-alt text-xs"></i></a>。</p>
@@ -499,37 +511,71 @@
             alert('🎮 恭喜解锁极客模式！');
         }
 
-        // 进度追踪逻辑 (与原版保持一致但增加视觉反馈)
-        let completedSteps = new Set();
-        document.addEventListener('click', (e) => {
-            if (e.target.closest('button') || e.target.closest('.hover-zoom') || e.target.closest('[onclick]')) {
-                const element = e.target.closest('button, img, div');
-                if (element) {
-                    const stepId = element.src || element.textContent?.substring(0, 10) || Math.random();
-                    completedSteps.add(stepId);
-                    updateProgress();
-                }
-            }
+        // 进度追踪逻辑 (滑动页面自动增加)
+        let viewedSteps = new Set();
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            // 使用 IntersectionObserver 监听元素进入视口
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const stepElement = entry.target;
+                        // 使用 data-step 属性或内容哈希作为 ID
+                        const stepId = stepElement.dataset.step || stepElement.innerText.substring(0, 20);
+                        
+                        if (!viewedSteps.has(stepId)) {
+                            viewedSteps.add(stepId);
+                            updateProgress();
+                            
+                            // 视觉反馈：进入视口时高亮一下
+                            gsap.fromTo(stepElement, 
+                                { scale: 0.95, opacity: 0.8 }, 
+                                { scale: 1, opacity: 1, duration: 0.5, ease: 'back.out' }
+                            );
+                        }
+                    }
+                });
+            }, {
+                threshold: 0.5, // 元素进入视口 50% 时触发
+                rootMargin: "0px 0px -100px 0px" // 稍微向上偏移，确保用户真正看到了
+            });
+
+            // 监听所有步骤项和重要对应的内容块
+            document.querySelectorAll('.step-item, .glass-panel h3').forEach(el => {
+                observer.observe(el);
+            });
         });
 
         function updateProgress() {
-            const totalSteps = 10;
-            const completed = Math.min(completedSteps.size, totalSteps);
-            const progressPercent = Math.min((completed / totalSteps) * 100, 100);
+            // 估算总步骤数 (Steps + Tabs + Sections)
+            const totalEstimatedSteps = 8; 
+            const currentCount = viewedSteps.size;
+            
+            // 计算百分比，最高 100%
+            const progressPercent = Math.min((currentCount / totalEstimatedSteps) * 100, 100);
             
             if (window.Alpine) {
-                // Try to update Alpine scope if available, or just rely on reactivity if initialized differently
-                // Simple hack for this specific setup:
                 const el = document.querySelector('[x-data]');
                 if(el && el.__x && el.__x.$data) {
+                    // 平滑增加
+                    gsap.to(el.__x.$data, {
+                        progress: progressPercent,
+                        duration: 1,
+                        onUpdate: () => {
+                            // Alpine reactive property updated automatically by GSAP if mapped correctly, 
+                            // but here we might need to manually set if it's a primitive.
+                            // Actually, let's just set it directly for simplicity as GSAP + Alpine proxy can be tricky
+                        }
+                    });
                     el.__x.$data.progress = progressPercent;
                 }
             }
             
-            if (progressPercent === 100) {
+            if (progressPercent === 100 && !window.hasCelebrated) {
+                window.hasCelebrated = true;
                 confetti({
-                    particleCount: 100,
-                    spread: 70,
+                    particleCount: 150,
+                    spread: 100,
                     origin: { y: 0.6 }
                 });
             }
